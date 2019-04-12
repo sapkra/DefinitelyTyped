@@ -56,7 +56,7 @@ export interface Schema<T> {
     meta(metadata: any): this;
     meta(): any;
     describe(): SchemaDescription;
-    concat(schema: this): this;
+    concat(schema: any): this;
     validate(value: any, options?: ValidateOptions): Promise<T>;
     validateSync(value: any, options?: ValidateOptions): T;
     validateAt(path: string, value: T, options?: ValidateOptions): Promise<T>;
